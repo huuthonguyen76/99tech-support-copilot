@@ -1,0 +1,44 @@
+{"at": "2026-10-22T18:39:19+00:00", "action": "context.read", "ticket_id": "T-5103"}
+{"at": "2026-10-22T18:39:20+00:00", "action": "context.read", "ticket_id": "T-5104"}
+{"at": "2026-10-22T18:39:20+00:00", "action": "context.read", "ticket_id": "T-5105"}
+{"at": "2026-10-22T18:39:26+00:00", "action": "escalations.upsert", "key": "T-5103:team_lead", "revision": 1}
+{"at": "2026-10-22T18:39:28+00:00", "action": "escalations.upsert", "key": "T-5104:team_lead", "revision": 1}
+{"at": "2026-10-22T18:39:29+00:00", "action": "escalations.upsert", "key": "T-5105:team_lead", "revision": 1}
+{"at": "2026-10-22T18:39:34+00:00", "action": "drafts.upsert", "key": "T-5103", "revision": 1}
+{"at": "2026-10-22T18:39:38+00:00", "action": "drafts.upsert", "key": "T-5104", "revision": 1}
+{"at": "2026-10-22T18:39:42+00:00", "action": "draft.rejected", "ticket_id": "T-5105", "codes": ["promo_to_at_risk_customer"]}
+{"at": "2026-10-22T18:39:47+00:00", "action": "drafts.upsert", "key": "T-5105", "revision": 1}
+{"at": "2026-10-22T18:39:50+00:00", "action": "drafts.upsert", "key": "T-5104", "revision": 2}
+{"at": "2026-10-22T18:39:54+00:00", "action": "context.read", "ticket_id": "T-5102"}
+{"at": "2026-10-22T18:39:54+00:00", "action": "context.read", "ticket_id": "T-5110"}
+{"at": "2026-10-22T18:39:54+00:00", "action": "context.read", "ticket_id": "T-5111"}
+{"at": "2026-10-22T18:39:54+00:00", "action": "context.read", "ticket_id": "T-5107"}
+{"at": "2026-10-22T18:39:58+00:00", "action": "escalations.upsert", "key": "T-5110:payments", "revision": 1}
+{"at": "2026-10-22T18:40:00+00:00", "action": "escalations.upsert", "key": "T-5102:payments", "revision": 1}
+{"at": "2026-10-22T18:40:01+00:00", "action": "escalations.upsert", "key": "T-5111:team_lead", "revision": 1}
+{"at": "2026-10-22T18:40:06+00:00", "action": "drafts.upsert", "key": "T-5110", "revision": 1}
+{"at": "2026-10-22T18:40:08+00:00", "action": "drafts.upsert", "key": "T-5102", "revision": 1}
+{"at": "2026-10-22T18:40:11+00:00", "action": "draft.rejected", "ticket_id": "T-5111", "codes": ["outdated_policy"]}
+{"at": "2026-10-22T18:40:15+00:00", "action": "drafts.upsert", "key": "T-5107", "revision": 1}
+{"at": "2026-10-22T18:40:19+00:00", "action": "drafts.upsert", "key": "T-5102", "revision": 2}
+{"at": "2026-10-22T18:40:22+00:00", "action": "drafts.upsert", "key": "T-5111", "revision": 1}
+{"at": "2026-10-22T18:40:22+00:00", "action": "context.read", "ticket_id": "T-5106"}
+{"at": "2026-10-22T18:40:22+00:00", "action": "context.read", "ticket_id": "T-5108"}
+{"at": "2026-10-22T18:40:26+00:00", "action": "refund_requests.upsert", "key": "T-5106", "revision": 1}
+{"at": "2026-10-22T18:40:28+00:00", "action": "escalations.upsert", "key": "T-5106:team_lead", "revision": 1}
+{"at": "2026-10-22T18:40:30+00:00", "action": "drafts.upsert", "key": "T-5108", "revision": 1}
+{"at": "2026-10-22T18:40:36+00:00", "action": "drafts.upsert", "key": "T-5106", "revision": 1}
+{"at": "2026-10-22T18:40:37+00:00", "action": "context.read", "ticket_id": "T-5109"}
+{"at": "2026-10-22T18:40:37+00:00", "action": "context.read", "ticket_id": "T-5101"}
+{"at": "2026-10-22T18:40:37+00:00", "action": "context.read", "ticket_id": "T-5112"}
+{"at": "2026-10-22T18:40:42+00:00", "action": "escalations.upsert", "key": "T-5112:team_lead", "revision": 1}
+{"at": "2026-10-22T18:40:45+00:00", "action": "drafts.upsert", "key": "T-5112", "revision": 1}
+{"at": "2026-10-22T18:40:48+00:00", "action": "draft.rejected", "ticket_id": "T-5109", "codes": ["outdated_policy"]}
+{"at": "2026-10-22T18:40:50+00:00", "action": "drafts.upsert", "key": "T-5101", "revision": 1}
+{"at": "2026-10-22T18:40:51+00:00", "action": "context.read", "ticket_id": "T-5113"}
+{"at": "2026-10-22T18:40:51+00:00", "action": "context.read", "ticket_id": "T-5114"}
+{"at": "2026-10-22T18:40:52+00:00", "action": "context.read", "ticket_id": "T-5115"}
+{"at": "2026-10-22T18:40:57+00:00", "action": "drafts.upsert", "key": "T-5109", "revision": 1}
+{"at": "2026-10-22T18:40:59+00:00", "action": "drafts.upsert", "key": "T-5113", "revision": 1}
+{"at": "2026-10-22T18:41:02+00:00", "action": "drafts.upsert", "key": "T-5114", "revision": 1}
+{"at": "2026-10-22T18:41:03+00:00", "action": "drafts.upsert", "key": "T-5115", "revision": 1}

@@ -1,0 +1,11 @@
+{
+  "T-5106": {
+    "amount_usd": 250.0,
+    "customer_id": "C-1002",
+    "reason": "Customer reports a live game froze mid-round and they lost a USD 250 bet. The game round hasn't been verified yet: check it in backoffice before approving. Above the USD 100 agent limit, so team lead approval is needed. The Gold tier doesn't change the limit.",
+    "requested_at": "2026-09-29T09:00:00+00:00",
+    "revision": 1,
+    "status": "awaiting_team_lead_approval",
+    "ticket_id": "T-5106"
+  }
+}

@@ -1,0 +1,42 @@
+{"at": "2026-10-22T18:42:15+00:00", "action": "context.read", "ticket_id": "T-5103"}
+{"at": "2026-10-22T18:42:15+00:00", "action": "context.read", "ticket_id": "T-5104"}
+{"at": "2026-10-22T18:42:16+00:00", "action": "context.read", "ticket_id": "T-5105"}
+{"at": "2026-10-22T18:42:21+00:00", "action": "escalations.upsert", "key": "T-5103:team_lead", "revision": 1}
+{"at": "2026-10-22T18:42:23+00:00", "action": "escalations.upsert", "key": "T-5104:team_lead", "revision": 1}
+{"at": "2026-10-22T18:42:24+00:00", "action": "escalations.upsert", "key": "T-5105:team_lead", "revision": 1}
+{"at": "2026-10-22T18:42:30+00:00", "action": "drafts.upsert", "key": "T-5103", "revision": 1}
+{"at": "2026-10-22T18:42:34+00:00", "action": "drafts.upsert", "key": "T-5104", "revision": 1}
+{"at": "2026-10-22T18:42:38+00:00", "action": "drafts.upsert", "key": "T-5105", "revision": 1}
+{"at": "2026-10-22T18:42:40+00:00", "action": "context.read", "ticket_id": "T-5102"}
+{"at": "2026-10-22T18:42:41+00:00", "action": "context.read", "ticket_id": "T-5111"}
+{"at": "2026-10-22T18:42:41+00:00", "action": "context.read", "ticket_id": "T-5107"}
+{"at": "2026-10-22T18:42:41+00:00", "action": "context.read", "ticket_id": "T-5110"}
+{"at": "2026-10-22T18:42:46+00:00", "action": "escalations.upsert", "key": "T-5110:payments", "revision": 1}
+{"at": "2026-10-22T18:42:47+00:00", "action": "escalations.upsert", "key": "T-5102:payments", "revision": 1}
+{"at": "2026-10-22T18:42:49+00:00", "action": "escalations.upsert", "key": "T-5111:team_lead", "revision": 1}
+{"at": "2026-10-22T18:42:54+00:00", "action": "drafts.upsert", "key": "T-5110", "revision": 1}
+{"at": "2026-10-22T18:42:56+00:00", "action": "drafts.upsert", "key": "T-5102", "revision": 1}
+{"at": "2026-10-22T18:43:00+00:00", "action": "draft.rejected", "ticket_id": "T-5111", "codes": ["outdated_policy"]}
+{"at": "2026-10-22T18:43:05+00:00", "action": "drafts.upsert", "key": "T-5107", "revision": 1}
+{"at": "2026-10-22T18:43:12+00:00", "action": "drafts.upsert", "key": "T-5111", "revision": 1}
+{"at": "2026-10-22T18:43:14+00:00", "action": "drafts.upsert", "key": "T-5102", "revision": 2}
+{"at": "2026-10-22T18:43:17+00:00", "action": "drafts.upsert", "key": "T-5107", "revision": 2}
+{"at": "2026-10-22T18:43:19+00:00", "action": "context.read", "ticket_id": "T-5106"}
+{"at": "2026-10-22T18:43:19+00:00", "action": "context.read", "ticket_id": "T-5108"}
+{"at": "2026-10-22T18:43:20+00:00", "action": "context.read", "ticket_id": "T-5109"}
+{"at": "2026-10-22T18:43:20+00:00", "action": "context.read", "ticket_id": "T-5101"}
+{"at": "2026-10-22T18:43:24+00:00", "action": "refund_requests.upsert", "key": "T-5106", "revision": 1}
+{"at": "2026-10-22T18:43:25+00:00", "action": "escalations.upsert", "key": "T-5106:team_lead", "revision": 1}
+{"at": "2026-10-22T18:43:31+00:00", "action": "drafts.upsert", "key": "T-5106", "revision": 1}
+{"at": "2026-10-22T18:43:35+00:00", "action": "drafts.upsert", "key": "T-5108", "revision": 1}
+{"at": "2026-10-22T18:43:38+00:00", "action": "drafts.upsert", "key": "T-5109", "revision": 1}
+{"at": "2026-10-22T18:43:41+00:00", "action": "drafts.upsert", "key": "T-5101", "revision": 1}
+{"at": "2026-10-22T18:43:43+00:00", "action": "context.read", "ticket_id": "T-5112"}
+{"at": "2026-10-22T18:43:43+00:00", "action": "context.read", "ticket_id": "T-5113"}
+{"at": "2026-10-22T18:43:44+00:00", "action": "context.read", "ticket_id": "T-5114"}
+{"at": "2026-10-22T18:43:44+00:00", "action": "context.read", "ticket_id": "T-5115"}
+{"at": "2026-10-22T18:43:47+00:00", "action": "escalations.upsert", "key": "T-5112:team_lead", "revision": 1}
+{"at": "2026-10-22T18:43:50+00:00", "action": "drafts.upsert", "key": "T-5112", "revision": 1}
+{"at": "2026-10-22T18:43:51+00:00", "action": "drafts.upsert", "key": "T-5113", "revision": 1}
+{"at": "2026-10-22T18:43:55+00:00", "action": "drafts.upsert", "key": "T-5114", "revision": 1}
+{"at": "2026-10-22T18:43:56+00:00", "action": "drafts.upsert", "key": "T-5115", "revision": 1}
