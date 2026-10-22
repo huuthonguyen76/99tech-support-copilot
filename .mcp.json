@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "support-copilot": {
+      "command": "uv",
+      "args": ["run", "--directory", ".", "support-copilot"]
+    }
+  }
+}
