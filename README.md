@@ -5,6 +5,13 @@ An MCP server for the 99Tech Customer Support team. For each open ticket it does
 - Code: `src/support_copilot/`
 - Output on all 15 open tickets: [`output/open-tickets-report.md`](output/open-tickets-report.md)
 - Tests: `tests/` (67 tests) plus the checks in `scripts/build_report.py`
+- Demo: [95-second end-to-end recording](docs/demo/e2e.mp4), below
+
+## Demo
+
+![End-to-end demo: fresh clone, tests, Claude Code calling the MCP tools, the injected refund refused, a bad human edit blocked, the full-run checks](docs/demo/e2e.gif)
+
+Fresh clone from GitHub, then the test suite. Claude Code works three tickets through the MCP server over stdio: the prompt-injection ticket (T-5104), a KYC ticket with a chargeback threat (T-5103) and a Vietnamese deposit ticket (T-5107). It then shows the drafts and escalations the tools wrote, no refund recorded, a human edit that echoes the injected "$5,000 VIP refund" blocked at approval, a clean approval, and the checks on the full 15-ticket run. Script: [`docs/demo/demo.sh`](docs/demo/demo.sh). Also available as [MP4](docs/demo/e2e.mp4) and [asciinema cast](docs/demo/e2e.cast). It was recorded before the last 2 tests were added, so the test step shows 65 passed.
 
 ## TL;DR
 
