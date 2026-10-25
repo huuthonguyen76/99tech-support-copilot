@@ -42,6 +42,7 @@ DRAFT_PROMO_TERMS = [r"50\s?%", r"usd\s?200", r"\$200", r"once per week", r"1 oc
 CORRECTION_MARKERS = (r"\b(correct|(wasn'?t|isn'?t|not) (fully |quite |entirely |completely )?(right|accurate|correct)|incorrect|inaccurate|"
                       r"wrong|mistake|apologi[sz]e for)")
 REOPEN_TERMS = [r"reopen", r"re-open", r"lift (the|your) (exclusion|block)", r"unblock"]
+PLACEHOLDER = r"\[\s*agent\b[^\]]*\]"
 
 
 def _hit(patterns: list[str], text: str) -> str | None:
@@ -52,7 +53,9 @@ def _hit(patterns: list[str], text: str) -> str | None:
     return None
 
 
-def check_draft(text: str, ticket: Ticket, assessment: Assessment, export: Export) -> list[Violation]:
+def check_draft(text: str, ticket: Ticket, assessment: Assessment, export: Export,
+                final: bool = False) -> list[Violation]:
+    """`final=True` is the human approve step: the text is about to be sent as-is."""
     out: list[Violation] = []
     customer = export.customers[ticket.customer_id]
     codes = assessment.codes()
@@ -142,7 +145,13 @@ def check_draft(text: str, ticket: Ticket, assessment: Assessment, export: Expor
     if expected != "en" and detect_language(text) != expected:
         out.append(Violation("wrong_language", True, f"Customer wrote in `{expected}`; reply in the same language."))
 
-    # 10. Non-blocking hygiene.
+    # 10. Placeholders for the agent are fine in a draft, never in a sent reply.
+    placeholder = re.search(PLACEHOLDER, text, re.IGNORECASE)
+    if placeholder:
+        out.append(Violation("unfilled_placeholder", final,
+                             f"Reply still contains '{placeholder.group(0)}'. The agent must fill it in before sending."))
+
+    # 11. Non-blocking hygiene.
     if customer.email.lower() in lowered or customer.phone in text:
         out.append(Violation("contains_contact_details", False, "Draft repeats the customer's contact details; usually unnecessary."))
     if re.search(r"\b(TX|T)-\d{4,5}\b", text) and not re.search(rf"\b{re.escape(ticket.ticket_id)}\b", text):

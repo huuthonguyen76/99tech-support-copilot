@@ -6,7 +6,8 @@
     uv run support-review reject T-5101 --by Linh --why "wrong amount"
 
 Approving re-runs the guardrails on the final text, so a human edit can't
-quietly reintroduce a policy break. Approved replies are what the agent pastes
+quietly reintroduce a policy break, and an unfilled [AGENT: ...] placeholder
+blocks approval. Approved replies are what the agent pastes
 into the helpdesk; this tool still never contacts the customer.
 """
 
@@ -60,7 +61,7 @@ def main(argv: list[str] | None = None) -> int:
     text = args.text_file.read_text(encoding="utf-8") if args.text_file else d["reply_text"]
     export = load_export()
     ticket = export.tickets[tid]
-    blocking = [v for v in check_draft(text, ticket, assess(ticket, export), export) if v.blocking]
+    blocking = [v for v in check_draft(text, ticket, assess(ticket, export), export, final=True) if v.blocking]
     if blocking:
         for v in as_dicts(blocking):
             print(f"BLOCKED {v['code']}: {v['detail']}", file=sys.stderr)

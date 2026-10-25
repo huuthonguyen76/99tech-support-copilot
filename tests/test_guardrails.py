@@ -89,6 +89,17 @@ def test_run_1_false_positives_now_pass(export, ticket_id):
     assert blocking(export, ticket_id.split("-run")[0], FALSE_POSITIVES_RUN_1[ticket_id]) == set()
 
 
+def test_placeholder_is_a_warning_in_draft_and_blocks_on_approve(export):
+    t = export.tickets["T-5114"]
+    text = "Hi Aisha, bank transfer is [AGENT: confirm on the cashier page] for Malaysia."
+    draft = {v.code: v.blocking for v in check_draft(text, t, assess(t, export), export)}
+    final = {v.code: v.blocking for v in check_draft(text, t, assess(t, export), export, final=True)}
+    assert draft["unfilled_placeholder"] is False
+    assert final["unfilled_placeholder"] is True
+    filled = "Hi Aisha, bank transfer is available for Malaysia."
+    assert not any(v.code == "unfilled_placeholder" for v in check_draft(filled, t, assess(t, export), export, final=True))
+
+
 def test_correction_is_still_a_warning(export):
     t = export.tickets["T-5109"]
     vs = check_draft(FALSE_POSITIVES_RUN_1["T-5109"], t, assess(t, export), export)

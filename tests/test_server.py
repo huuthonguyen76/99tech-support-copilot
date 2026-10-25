@@ -133,3 +133,14 @@ async def test_human_approval_rechecks_edits(tmp_path):
     assert store.load("drafts")["T-5101"]["status"] == "pending_review"
     assert review_main(["approve", "T-5101", "--by", "Linh"]) == 0
     assert store.load("drafts")["T-5101"]["status"] == "approved"
+
+
+async def test_human_approval_blocks_unfilled_placeholder(tmp_path):
+    async with Client(mcp) as c:
+        _, r = await call(c, "save_draft_reply", ticket_id="T-5114",
+                          reply_text="Hi Aisha, bank transfer is [AGENT: check the cashier page] for Malaysia.")
+    assert r["status"] == "pending_review"                # saving with a placeholder is allowed
+    assert review_main(["approve", "T-5114", "--by", "Linh"]) == 2
+    filled = tmp_path / "edit.txt"
+    filled.write_text("Hi Aisha, bank transfer is available for Malaysia.")
+    assert review_main(["approve", "T-5114", "--by", "Linh", "--text-file", str(filled)]) == 0
